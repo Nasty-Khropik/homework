@@ -39,6 +39,7 @@ public class Main {
 	a7--;
 	System.out.println(a7);
 
+	    // лишние пробелы в начале начиная со строки 43 и до конца. В целом все хорошо
 		int b1=b+1;
 		System.out.println(b1);
 		int b2=b-1;
