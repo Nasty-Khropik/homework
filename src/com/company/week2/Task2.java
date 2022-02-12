@@ -8,6 +8,8 @@ public class Task2 {
             int len = names[i].length();
             if (len<2)
                 continue;
+            if (len>10)
+                break;
             if (len<4){
                 System.out.println("Ваше имя короче 4 букв");
             }
@@ -17,14 +19,15 @@ public class Task2 {
             else{
                 System.out.println("Ваше имя состоит из 4 букв");
             }
-            if (len>10)
-            break;
+
         }
         int i = 0;
         while ( i< count) {
             int len = names[i].length();
             if (len<2)
                 continue;
+            if (len>10)
+                break;
             if (len<4){
                 System.out.println("Ваше имя короче 4 букв");
             }
@@ -34,8 +37,6 @@ public class Task2 {
             else{
                 System.out.println("Ваше имя состоит из 4 букв");
             }
-            if (len>10)
-                break;
             i++;
             }
         int u=0;
@@ -43,6 +44,8 @@ public class Task2 {
             int len = names[u].length();
             if (len<2)
                 continue;
+            if (len>10)
+                break;
             if (len<4){
                 System.out.println("Ваше имя короче 4 букв");
             }
@@ -52,8 +55,6 @@ public class Task2 {
             else{
                 System.out.println("Ваше имя состоит из 4 букв");
             }
-            if (len>10)
-                break;
             u++;
 
         } while (u < count);
