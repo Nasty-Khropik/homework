@@ -1,5 +1,9 @@
 package com.company.week2;
 
+//все отлично сделано!
+//пару советов: строка 10 здесь необязательна, мы могли бы вместо нее, сразу в строке 11
+//исользовать длину массива без доп.переменной: for (int i=0; i < names.length; i++)
+//и второй совет: все операторы (> < = !=, и тд) лучше окружать пробелами для лучшей читаемости (len<4) -> (len < 4)
 public class Task2 {
     public static void main(String[] args){
         String [] names = {"John", "Bob", "Mary", "Peter", "Sarah"};

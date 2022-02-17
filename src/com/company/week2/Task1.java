@@ -1,5 +1,7 @@
 package com.company.week2;
 
+//В целом все хорошо. Единственное - в этой задаче лучше использовать двойной
+//оператор 'и' (&&). Почитай про разнизу между & и && (| и ||)
 public class Task1 {
     public static void main(String[] args){
         int a = 91;
