@@ -1,5 +1,7 @@
 package com.company.week3;
 import  java.util.Scanner;
+
+// все отлично!
 public class Task1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
