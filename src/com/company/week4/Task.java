@@ -8,6 +8,7 @@ public class Task {
         System.out.println("1.New York");
         System.out.println("2.Moscow");
         System.out.println("3.London");
+        System.out.println("Введите цифру вашего города:");
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         sc.close();
