@@ -11,38 +11,93 @@ public class Task {
         System.out.println("Введите цифру вашего города:");
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        System.out.println("Какой кофе Вы хотике заказать?");
+        System.out.println("1.Latte");
+        System.out.println("2.Capuccino");
+        System.out.println("3.Espresso");
+        System.out.println("Введите цифру:");
+        Scanner scan = new Scanner(System.in);
+        int m = scan.nextInt();
         sc.close();
-        NewYorkCoffeShop drink1 = new NewYorkCoffeShop();
-        MoscowCoffeShop drink2 = new MoscowCoffeShop();
-        LondonCoffeShop drink3 = new LondonCoffeShop();
-            if (n == 1) {
-                drink1.makeCoffe();
+        NewYorkCoffeShop drinkNY = new NewYorkCoffeShop();
+        MoscowCoffeShop drinkMos = new MoscowCoffeShop();
+        LondonCoffeShop drinkLon = new LondonCoffeShop();
+        if (n==1){
+            if (m==1){
+                drinkNY.makelatte();
             }
-            else if (n == 2) {
-                drink2.makeCoffe();
+            else if (m==2){
+                drinkNY.makeCapuccino();
             }
-            else if (n == 3) {
-                drink3.makeCoffe();
+            else if (m==3){
+                drinkNY.makeEspresso();
             }
             else {
-                System.out.println("Вы ввели неверное число");
+                System.out.println("Вы ввели неверное число.");
             }
+        }
+        if (n==2){
+            if (m==1){
+                drinkMos.makelatte();
+            }
+            else if (m==2){
+                drinkMos.makeCapuccino();
+            }
+            else if (m==3){
+                drinkMos.makeEspresso();
+            }
+            else {
+                System.out.println("Вы ввели неверное число.");
+            }
+        }
+        if (n==3){
+            if (m==1){
+                drinkLon.makelatte();
+            }
+            else if (m==2){
+                drinkLon.makeCapuccino();
+            }
+            else if (m==3){
+                drinkLon.makeEspresso();
+            }
+            else {
+                System.out.println("Вы ввели неверное число.");
+            }
+        }
+
     }
 }
 class NewYorkCoffeShop {
-    void makeCoffe(){
-        System.out.println("Thanks for order in New York, take your coffe. Bye!");
+    void makelatte(){
+        System.out.println("Thanks for order in New York, take your latte. Bye!");
+    }
+    void makeCapuccino() {
+        System.out.println("Thanks for order in New York, take your capuccino. Bye!");
+    }
+    void makeEspresso() {
+        System.out.println("Thanks for order in New York, take your espresso. Bye!");
     }
 }
 class MoscowCoffeShop {
-    void makeCoffe(){
-        System.out.println("Thanks for order in Moscow, take your coffe. Bye!");
+    void makelatte(){
+        System.out.println("Thanks for order in Moscow, take your latte. Bye!");
     }
-
+    void makeCapuccino() {
+        System.out.println("Thanks for order in Moscow, take your capuccino. Bye!");
+    }
+    void makeEspresso() {
+        System.out.println("Thanks for order in Moscow, take your espresso. Bye!");
+    }
 }
 class LondonCoffeShop {
-    void makeCoffe(){
-        System.out.println("Thanks for order in London, take your coffe. Bye!");
+    void makelatte(){
+        System.out.println("Thanks for order in London, take your latte. Bye!");
+    }
+    void makeCapuccino() {
+        System.out.println("Thanks for order in London, take your capuccino. Bye!");
+    }
+    void makeEspresso() {
+        System.out.println("Thanks for order in London, take your espresso. Bye!");
     }
 
 }
