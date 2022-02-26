@@ -23,6 +23,7 @@ public class Task {
         MoscowCoffeShop drinkMos = new MoscowCoffeShop();
         LondonCoffeShop drinkLon = new LondonCoffeShop();
         if (n==1){
+            drinkNY.waitWait();
             if (m==1){
                 drinkNY.makelatte();
             }
@@ -37,6 +38,7 @@ public class Task {
             }
         }
         if (n==2){
+            drinkMos.waitWait();
             if (m==1){
                 drinkMos.makelatte();
             }
@@ -51,6 +53,7 @@ public class Task {
             }
         }
         if (n==3){
+            drinkLon.waitWait();
             if (m==1){
                 drinkLon.makelatte();
             }
@@ -68,6 +71,9 @@ public class Task {
     }
 }
 class NewYorkCoffeShop {
+    void waitWait(){
+        System.out.println("Please,wait a minute");
+    }
     void makelatte(){
         System.out.println("Thanks for order in New York, take your latte. Bye!");
     }
@@ -79,6 +85,9 @@ class NewYorkCoffeShop {
     }
 }
 class MoscowCoffeShop {
+    void waitWait(){
+        System.out.println("Please,wait a minute");
+    }
     void makelatte(){
         System.out.println("Thanks for order in Moscow, take your latte. Bye!");
     }
@@ -90,6 +99,9 @@ class MoscowCoffeShop {
     }
 }
 class LondonCoffeShop {
+    void waitWait(){
+        System.out.println("Please,wait a minute");
+    }
     void makelatte(){
         System.out.println("Thanks for order in London, take your latte. Bye!");
     }
