@@ -2,6 +2,7 @@ package com.company.week4;
 
 import java.util.Scanner;
 
+//мы делаем полноценное приложение. Этот класс можно назвать как-нибудь типа CoffeeShop
 public class Task {
     public static void main(String [] args){
         System.out.println("Из какого Вы города?");
@@ -16,6 +17,8 @@ public class Task {
         System.out.println("2.Capuccino");
         System.out.println("3.Espresso");
         System.out.println("Введите цифру:");
+        
+        //зачем здесь создавать новый сканнер если уже есть один (стр. 13)
         Scanner scan = new Scanner(System.in);
         int m = scan.nextInt();
         sc.close();
@@ -23,6 +26,9 @@ public class Task {
         MoscowCoffeShop drinkMos = new MoscowCoffeShop();
         LondonCoffeShop drinkLon = new LondonCoffeShop();
         if (n==1){
+            //почему метод называется waitWait.. можно ведь просто wait
+            //метод wait должен вызываться внутри методов makelatte, makeCapuccino и тд
+            //это не повлияет на работоспособность, просто так мы избавимся от лишних строк в вызывающем коде
             drinkNY.waitWait();
             if (m==1){
                 drinkNY.makelatte();
@@ -70,11 +76,14 @@ public class Task {
 
     }
 }
+
+// все классы-кофейни должны быть в отдельных файлах
 class NewYorkCoffeShop {
     void waitWait(){
         System.out.println("Please,wait a minute");
     }
     void makelatte(){
+        //вот здесь должен быть вызов метода wait. и в остальных тоже
         System.out.println("Thanks for order in New York, take your latte. Bye!");
     }
     void makeCapuccino() {
