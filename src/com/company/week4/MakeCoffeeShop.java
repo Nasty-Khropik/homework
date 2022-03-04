@@ -5,5 +5,6 @@ public abstract class MakeCoffeeShop {
     public abstract void makelatte();
     public abstract void makeCapuccino();
     public abstract void makeEspresso();
+    public String name;
 
 }

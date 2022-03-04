@@ -18,9 +18,9 @@ public class CoffeeShop {
         System.out.println("Введите цифру:");
         int m = sc.nextInt();
         sc.close();
-        NewYorkCoffeShop drinkNY = new NewYorkCoffeShop();
-        MoscowCoffeShop drinkMos = new MoscowCoffeShop();
-        LondonCoffeShop drinkLon = new LondonCoffeShop();
+        NewYorkCoffeShop drinkNY = new NewYorkCoffeShop("New York");
+        MoscowCoffeShop drinkMos = new MoscowCoffeShop("Moscow");
+        LondonCoffeShop drinkLon = new LondonCoffeShop("London");
         if (n==1){
             if (m==1){
                 drinkNY.makelatte();
