@@ -9,6 +9,8 @@ public abstract class MakeCoffeeShop {
     public static void waiting(){
         System.out.println("Please,wait a minute");
     }
+    
+    //названия методов должны быть в camelCase, как методы которые после latte у тебя
     public void makelatte(){
         MakeCoffeeShop.waiting();
         System.out.println("Thanks for order in " + name +", take your latte. Bye!");
