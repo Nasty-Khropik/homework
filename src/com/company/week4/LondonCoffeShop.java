@@ -1,7 +1,8 @@
 package com.company.week4;
 
-public class LondonCoffeShop  {
-
-
+public class LondonCoffeShop extends MakeCoffeeShop {
+    public LondonCoffeShop(String name){
+        super(name);
+    }
 }
 

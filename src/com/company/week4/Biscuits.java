@@ -1,7 +1,5 @@
 package com.company.week4;
 
 public interface Biscuits {
-    public void sellBiscuits();
+    void sellBiscuits();
 }
-// по этому пункту у меня тоже вопрос: по тз наши классы кофейни до конца остаются пустыми
-// получается где мы должны вызывать данный интерфейс? в абстрактном классе? а такое вообще возможно?
