@@ -24,6 +24,12 @@ public class CoffeeShop {
             System.out.println("Do want get statistics?");
             String answer = sc.nextLine();
             MakeCoffeeShop current = null;
+            
+            // я прдполагаю что исключение возникает здесь.
+            // это потому что ты делаешь assert current != null; в то время как переменная current к этому моменту может быть только null
+            // потому что ты создаешь объекты кофеен ниже
+            // я бы переформатировал немного код. После 17 строки я бы сразу поставил блок if-else, который ниже проверяет какой город выбран
+            // это позволило бы избавиться от постоянных повторений assert current != null;
             if (answer.equals("Yes")) {
                 assert current != null;
                 current.getStatistics();
@@ -37,6 +43,9 @@ public class CoffeeShop {
                 current = new LondonCoffeShop("London");
             } else {
                 System.out.println("Вы ввели неверное число.");
+                // здесь я бы еще поставил continue;
+                // чтобы работа программы дальше не шла если юзер ввел неправильный город
+                // и цикл бы начал новую итерацию снова с вопроса о городе
             }
             if (current instanceof Biscuits) {
                 ((Biscuits) current).sellBiscuits();
