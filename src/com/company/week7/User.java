@@ -7,11 +7,11 @@ import java.util.ArrayList;
 public class User {
     String firstName;
     String lastName;
-    Date birthDate = new Date();
+    Date birthDate;
     boolean gender;
     String email;
     String password;
-    ArrayList<String> loan = new ArrayList<String>();
-    ArrayList<String> debitCard = new ArrayList<String>();
+    ArrayList<String> loan;
+    ArrayList<String> debitCard;
 
 }
