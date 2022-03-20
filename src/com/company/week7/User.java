@@ -3,7 +3,7 @@ package com.company.week7;
 import java.util.Date;
 import java.util.ArrayList;
 
-
+//в java принятно в классах все поля писать вместе, а потом уже все геттеры/сеттеры к ним
 public class User {
     private String firstName;
     public String getFirstName(){
