@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class Bank {
     public void start(){
+        BankMenu menu = new BankMenu();
+        menu.showStartMenu();
 
     }
 }
