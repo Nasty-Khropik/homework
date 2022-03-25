@@ -4,6 +4,11 @@ import java.util.Date;
 
 public class Loan {
     private Date dateOfRegistration;
+    private double sum;
+    private double interestRate;
+    private int loanTerm;
+    private double monthlyPayment;
+
     public Date getDateOfRegistration() {
         return dateOfRegistration;
     }
@@ -11,7 +16,6 @@ public class Loan {
         this.dateOfRegistration = dateOfRegistration;
     }
 
-    private double sum;
     public double getSum() {
         return sum;
     }
@@ -19,7 +23,6 @@ public class Loan {
         this.sum = sum;
     }
 
-    private double interestRate;
     public double getInterestRate() {
         return interestRate;
     }
@@ -27,7 +30,6 @@ public class Loan {
         this.interestRate = interestRate;
     }
 
-    private int loanTerm;
     public int getLoanTerm() {
         return loanTerm;
     }
@@ -35,11 +37,14 @@ public class Loan {
         this.loanTerm = loanTerm;
     }
 
-    private double monthlyPayment;
     public double getMonthlyPayment() {
         return monthlyPayment;
     }
     public void setMonthlyPayment(double monthlyPayment) {
         this.monthlyPayment = monthlyPayment;
+    }
+    @Override
+    public String toString() {
+        return ("Date of registration: " + dateOfRegistration + "\nSumma: " + sum + "\nInterest rate: " + interestRate + "\nLoan term: " + loanTerm + "\nMonthly payment: " + monthlyPayment);
     }
 }
