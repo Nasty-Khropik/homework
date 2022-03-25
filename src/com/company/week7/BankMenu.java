@@ -18,7 +18,7 @@ public class BankMenu {
         if (choose == 1) {
             choose.showLogin();
         }
-        else if (choose == 2){
+        else if (choose == 2) {
             choose.showRegister();
         }
         else (System.exit(0));
