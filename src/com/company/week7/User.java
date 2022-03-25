@@ -3,9 +3,16 @@ package com.company.week7;
 import java.util.Date;
 import java.util.ArrayList;
 
-//в java принятно в классах все поля писать вместе, а потом уже все геттеры/сеттеры к ним
 public class User {
     private String firstName;
+    private String lastName;
+    private Date birthDate;
+    private boolean gender;
+    private String email;
+    private String password;
+    private ArrayList<String> loan;
+    private ArrayList<String> debitCard;
+
     public String getFirstName(){
         return firstName;
     }
@@ -13,7 +20,6 @@ public class User {
         this.firstName = firstName;
     }
 
-    private String lastName;
     public String getLastName(){
         return lastName;
     }
@@ -21,7 +27,6 @@ public class User {
         this.lastName = lastName;
     }
 
-    private Date birthDate;
     public Date getBirthDate(){
         return birthDate;
     }
@@ -29,7 +34,6 @@ public class User {
         this.birthDate = birthDate;
     }
 
-    private boolean gender;
     public boolean getGender(){
         return gender;
     }
@@ -37,7 +41,6 @@ public class User {
         this.gender = gender;
     }
 
-    private String email;
     public String getEmail(){
         return email;
     }
@@ -45,7 +48,6 @@ public class User {
         this.email = email;
     }
 
-    private String password;
     public String getPassword(){
         return password;
     }
@@ -53,7 +55,6 @@ public class User {
         this.password = password;
     }
 
-    private ArrayList<String> loan;
     public ArrayList<String> getLoan() {
         return loan;
     }
@@ -61,13 +62,15 @@ public class User {
         this.loan = loan;
     }
 
-    private ArrayList<String> debitCard;
-
     public ArrayList<String> getDebitCard() {
         return debitCard;
     }
-
     public void setDebitCard(ArrayList<String> debitCard) {
         this.debitCard = debitCard;
+    }
+
+    @Override
+    public String toString() {
+        return ("First name: " + firstName + "\nLast name: " + lastName + "\nBirth date: " + birthDate + "\nGender: " + gender + "\nE-mail: " + email + "\nPassword: " + password + "\nLoan: " + loan + "\nDebit card: " + debitCard);
     }
 }
