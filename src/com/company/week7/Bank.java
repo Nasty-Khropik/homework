@@ -9,8 +9,8 @@ public class Bank {
         public boolean doLogin(String email, String password){
             return true;
         }
+        public void doRegister(User user){
 
-
-
+        }
     }
 }
