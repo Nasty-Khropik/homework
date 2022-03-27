@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class BankMenu {
     Bank bank = new Bank();
     private Bank newBank = bank;
+
     // Олег, привет! что- то я перестала понимать и так мыслить, скорее всего пробелы в теории из-за нехватки времени в последнее время
     // я перестала понимать когда что надо применять
 
