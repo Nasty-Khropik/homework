@@ -1,11 +1,11 @@
 package com.company.week7;
 import java.util.Scanner;
-public class BankMenu {
-    Bank bank = new Bank();
-    private Bank newBank = bank;
 
-    // Олег, привет! что- то я перестала понимать и так мыслить, скорее всего пробелы в теории из-за нехватки времени в последнее время
-    // я перестала понимать когда что надо применять
+public class BankMenu {
+    private final Bank bank;
+    public BankMenu(Bank bank) {
+        this.bank = bank;
+    }
 
     private void showLogin() {
 
@@ -18,13 +18,18 @@ public class BankMenu {
         System.out.println("Select one: \n1. Login \n2. Register \n0. Exit");
         Scanner sc = new Scanner(System.in);
         int choose = sc.nextInt();
-        if (choose == 1) {
-            choose.showLogin();
+        if (choose == 0) {
+            System.exit(0);
+        }
+        else if (choose == 1) {
+            showLogin();
         }
         else if (choose == 2) {
-            choose.showRegister();
+            showRegister();
         }
-        else (System.exit(0));
+        else {
+            System.out.println("You have entered a non-existent command");
+        }
     }
 
     public void showBankMenu(){
