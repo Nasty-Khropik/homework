@@ -4,7 +4,6 @@ public class Bank {
     public void start(){
         BankMenu menu = new BankMenu(this);
         menu.showStartMenu();
-
     }
 
     public boolean doLogin(String email, String password){
