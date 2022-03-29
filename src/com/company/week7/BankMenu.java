@@ -3,13 +3,18 @@ package com.company.week7;
 import java.util.Scanner;
 
 public class BankMenu {
+    Scanner sc = new Scanner(System.in);
     private final Bank bank;
     public BankMenu(Bank bank) {
         this.bank = bank;
     }
 
     private void showLogin() {
-
+        System.out.println("Enter your login:");
+        String email = sc.nextLine();
+        System.out.println("Enter your password:");
+        String password = sc.nextLine();
+        bank.doLogin(email,password);
     }
     private void showRegister() {
 
@@ -17,7 +22,6 @@ public class BankMenu {
 
     public void showStartMenu() {
         System.out.println("Select one: \n1. Login \n2. Register \n0. Exit");
-        Scanner sc = new Scanner(System.in);
         int choose = sc.nextInt();
         if (choose == 0) {
             System.exit(0);
