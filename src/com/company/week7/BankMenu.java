@@ -17,7 +17,20 @@ public class BankMenu {
         bank.doLogin(email,password);
     }
     private void showRegister() {
-
+        System.out.println("Enter your First name:");
+        String firstName = sc.nextLine();
+        System.out.println("Enter your Last name:");
+        String lastName = sc.nextLine();
+        System.out.println("Enter your birth date:");
+        String birthDate = sc.nextLine();
+        System.out.println("Enter your gender:");
+        String gender = sc.nextLine();
+        System.out.println("Enter your login:");
+        String email = sc.nextLine();
+        System.out.println("Enter your password:");
+        String password = sc.nextLine();
+        User user = new User();
+        bank.doRegister(user);
     }
 
     public void showStartMenu() {
