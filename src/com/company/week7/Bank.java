@@ -1,6 +1,5 @@
 package com.company.week7;
 import java.io.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
@@ -12,9 +11,15 @@ public class Bank {
     }
 
     public boolean doLogin(String email, String password){
+        for (User user: users) {
+            if (user.getEmail() == email && user.getPassword() == password) {
+                return true;
+            }
+        }
         return true;
     }
     public void doRegister(User user){
+        serializeUsers((List<User>) user);
 
     }
 
