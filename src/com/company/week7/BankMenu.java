@@ -29,6 +29,9 @@ public class BankMenu {
         String email = sc.nextLine();
         System.out.println("Enter your password:");
         String password = sc.nextLine();
+        
+        //здесь ты предаешь в bank пустого юзера, зачем тогда было делать все что выше?
+        //все поля выше должны быть назначены этому юзеру перед тем как передавать его на регистрацию в банк
         User user = new User();
         bank.doRegister(user);
     }
