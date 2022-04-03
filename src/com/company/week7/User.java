@@ -1,9 +1,10 @@
 package com.company.week7;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.ArrayList;
 
-public class User {
+public class User implements Serializable {
     private String firstName;
     private String lastName;
     private Date birthDate;
