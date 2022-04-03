@@ -1,7 +1,5 @@
 package com.company.week7;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.List;
 
 public class Bank {
@@ -29,7 +27,19 @@ public class Bank {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
+
+    public void deserializeUsers() throws ClassNotFoundException {
+        try {
+            FileInputStream fis = new FileInputStream("Users.data");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+
+            User user = (User) ois.readObject();
+
+            ois.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        }
+
 }
