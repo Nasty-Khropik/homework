@@ -1,10 +1,13 @@
 package com.company.week7;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
-    public void start(){
-        BankMenu menu = new BankMenu(this);
+    private BankMenu menu = new BankMenu(this);
+    private List<User> users;
+    public void start() throws ClassNotFoundException {
+        deserializeUsers();
         menu.showStartMenu();
     }
 
