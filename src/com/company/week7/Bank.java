@@ -26,6 +26,7 @@ public class Bank {
     public void serializeUsers(List<User> users) {
         User user = new User();
         try {
+            //строка "Users.data" используется 2 раза в этом классе и не изменяется. Поэтому можно ее вынести в константу в этом классе
             FileOutputStream fos = new FileOutputStream("Users.data");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
 
@@ -33,6 +34,8 @@ public class Bank {
 
             oos.close();
         } catch (IOException e) {
+            //пользователь скорее всего не поймет что случилось, если ему в консоль высыпется весь stack trace.
+            //тут нужно написать ему что-то внятное
             e.printStackTrace();
         }
     }
@@ -42,6 +45,8 @@ public class Bank {
             FileInputStream fis = new FileInputStream("Users.data");
             ObjectInputStream ois = new ObjectInputStream(fis);
 
+            //в методе serialize ты сериализуешь Список пользователей, а тут читаешь из файла почему-то одного юзера
+            //тут нужно после того как ты десериализовала сипсок еще сохранить его в переменную users из строки 7
             User user = (User) ois.readObject();
 
             ois.close();
